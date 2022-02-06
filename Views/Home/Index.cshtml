@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Cat>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>ДОБРЕ ДОШЛИ в КОЕШКОТО ПРОСТРНАСТВО</h1>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+
+                <a asp-controller="Cats" asp-action="Details" asp-route-id="@(item.Id)">
+                    @item.Name
+                </a>
+            </li>
+        }
+    </ul>
+<a asp-controller="Cats" asp-action="AddCat"> СЪЗДАЙ нова котка</a>
+
+

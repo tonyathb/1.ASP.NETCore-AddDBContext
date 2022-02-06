@@ -1,0 +1,22 @@
+﻿@model Cat
+@{
+    ViewData["Title"] = "Details";
+}
+
+    <input type="button" value="Update" />
+    <img src="@(Model.ImageUrl)" alt="Picture for + @(Model.Id)" style="max-width:300px" />
+    <p>
+        <strong>
+            <label for="t1">Age:</label>
+            <input type="text" id="t1" value="@(Model.Age)" />
+        </strong>
+    </p>
+    <p>
+        <strong>
+            <label for="t2">Bread:</label>
+            <input type="text" id="t2" value="@(Model.Bread)" />
+        </strong>
+    </p>
+    <a asp-controller="Cats" asp-action="UpdateViewCat" asp-route-id="@(Model.Id)"> ПРОМЕНИ ТАЗИ котка</a>
+
+
